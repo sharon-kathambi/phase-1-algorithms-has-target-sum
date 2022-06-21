@@ -1,5 +1,16 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    let number = target - array[i];
+        
+      for(let n = i + 1; n < array.length; n++){
+      if(array[n] === number) {
+        return true;
+      }
+    }
+    
+  }
+  return false;
 }
 
 /* 
@@ -8,11 +19,13 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
-*/
+iterate through an array
+if the target minus the number selected is equal to any number in the array return true*/
 
 /*
+make a function that add any two numbers in an array that adds up to target
   Add written explanation of your solution here
-*/
+*/ 
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
